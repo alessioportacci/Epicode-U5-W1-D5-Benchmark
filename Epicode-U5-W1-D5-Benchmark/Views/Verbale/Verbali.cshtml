@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Epicode_U5_W1_D5_Benchmark.Models.VerbaleModel>
+
+@{
+    ViewBag.Title = "Verbali";
+}
+
+<h2>Verbali</h2>
+
+<p>
+    @Html.ActionLink("Nuovo verbale", "CreateVerbale")
+</p>
+<p>
+    @Html.ActionLink("Verbali con almeno 10 punti", "Verbali", "Verbale", new { id="", punti = true }, null)
+</p>
+<p>
+    @Html.ActionLink("Verbali da almeno 400€", "Verbali", "Verbale", new { id="", importo = true }, null)
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataTrascrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Decurtamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contestata)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Indirizzo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTrascrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Decurtamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contestata)
+        </td>
+
+    </tr>
+}
+
+</table>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Verbali.it</h1>
+        <p class="lead">Verbali.it è un fantastico sito che permette di inserire Utenti e collegarci dei Verbali. Mi scuso per l'assenza del CSS'</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-md">Scopri di più su ASP.NET &raquo;</a></p>
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Come funziona?</h2>
+            <p>
+                Il sito è suddiviso in 2 sezioni principali: Anagrafiche e Verbali. Il DB è composto da 3 tabelle ed due viste. Le Stored Procedure al suo interno sono dei lontani ricordi di esercitazioni passate.
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rickroll &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Anagrafiche</h2>
+            <p>Dalla sezione "Anagrafiche" è possibile visualizzare tutte le anagrafiche all'interno del sito. Da qui è inoltre possibile aggiungere una nuova anagrafica, vedere i punti decurtati e visualizzare tutti i verbali di un utenza.</p>
+            <p class="btn btn-outline-dark">@Html.ActionLink("Anagrafiche", "Anagrafiche", "Anagrafica")</p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Verbali</h2>
+            <p>Dalla sezione dei verbali è possibile visualizzare tutti verbali ed aggiungerne di nuovi. Sono presenti anche dei filtri per visualizzare i verbali con almeno 10 punti decurtati dalla patente o con un importo superiore a 400€.</p>
+            <p class="btn btn-outline-dark">@Html.ActionLink("Verbali", "Verbali", "Verbale")</p>
+        </section>
+    </div>
+</main>
